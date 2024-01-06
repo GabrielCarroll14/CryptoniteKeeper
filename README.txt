@@ -59,4 +59,7 @@ CryptoniteKeeper is provided as-is without any warranty or guarantees. The autho
    ```bash
    pip install customtkinter
 
+5. **Run The Game:**
+   navigate to the files directory then run this command.
+   
    python cryptonite_keeper.py
