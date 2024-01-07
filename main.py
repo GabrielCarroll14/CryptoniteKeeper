@@ -11,8 +11,8 @@ from customtkinter import CTkEntry
 
 # Create the store passwords function
 def store():
-    with open ("Passwords.txt", "a") as passwrds:
-        passwrds.write ("" + site.get() + " | " + password.get() + " \n") # Use .get() to retrive the variable
+    with open ("Passwords.txt", "a") as f:
+        f.write ("" + site.get() + " | " + password.get() + " \n") # Use .get() to retrive the variable
 
 # Create the functions to display the passwords
 def display():
@@ -27,8 +27,7 @@ def display():
     content_label = Label(root, text=content)
     content_label.pack(padx=40, pady=40)
 
-    
-# Set the colour scheme
+    # Set the colour scheme
 customtkinter.set_appearance_mode("light") # Colour is set to system so when it changes when the user changes there colour scheme
 customtkinter.set_default_color_theme("blue")
 
