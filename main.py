@@ -14,6 +14,7 @@ def store():
     with open ("Passwords.txt", "a") as passwrds:
         passwrds.write ("" + site.get() + " | " + password.get() + " \n") # Use .get() to retrive the variable
 
+# Create the functions to display the passwords
 def display():
     with open("passwords.txt", "r") as passwords:
         lines = passwords.readlines()
@@ -28,7 +29,7 @@ def display():
 
     
 # Set the colour scheme
-customtkinter.set_appearance_mode("system") # Colour is set to system so when it changes when the user changes there colour scheme
+customtkinter.set_appearance_mode("light") # Colour is set to system so when it changes when the user changes there colour scheme
 customtkinter.set_default_color_theme("blue")
 
 root = customtkinter.CTk()
