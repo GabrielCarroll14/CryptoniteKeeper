@@ -15,7 +15,11 @@ def store():
 
 # Create the fuction for showing passwords
 def display():
-    pass
+    with open ("passwords.txt", "r") as passwords:
+        content = passwords.read()
+        
+    content_label = Label(root, text=content)
+    content_label.pack (padx=40, pady=40) 
     
 # Set the colour scheme
 customtkinter.set_appearance_mode("system") # Colour is set to system so when it changes when the user changes there colour scheme
