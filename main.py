@@ -2,6 +2,7 @@
 import tkinter as tk
 from tkinter import Button
 from tkinter import Label
+from tkinter import *
 
 # Import custom Tkinter and modules
 import customtkinter
@@ -31,6 +32,8 @@ customtkinter.set_appearance_mode("system") # Colour is set to system so when it
 customtkinter.set_default_color_theme("blue")
 
 root = customtkinter.CTk()
+
+root.iconbitmap("favicon.ico")
 
 # Set the windows size
 root.geometry("400x450")
