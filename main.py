@@ -13,13 +13,18 @@ def store():
     with open ("Passwords.txt", "a") as passwrds:
         passwrds.write ("" + site.get() + " | " + password.get() + " \n") # Use .get() to retrive the variable
 
-# Create the fuction for showing passwords
 def display():
-    with open ("passwords.txt", "r") as passwords:
-        content = passwords.read()
-        
+    with open("passwords.txt", "r") as passwords:
+        lines = passwords.readlines()
+
+    content = ""
+    for line in lines:
+        site, password = line.strip().split(" | ")
+        content += f"Site: {site}\tPassword: {password}\n"
+
     content_label = Label(root, text=content)
-    content_label.pack (padx=40, pady=40) 
+    content_label.pack(padx=40, pady=40)
+
     
 # Set the colour scheme
 customtkinter.set_appearance_mode("system") # Colour is set to system so when it changes when the user changes there colour scheme
